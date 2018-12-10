@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="http://icons.iconarchive.com/icons/designbolts/free-valentine-heart/256/Heart-icon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {
+            color: #222;
+        }
+        #demo {
+            font-size: 20px;
+        }
+    </style>
+    <title>For You!</title>
+</head>
+
+<body style="background: #eee">
+    <div class="container">
+
+        <h1 class="text-center">For you My Special Girl</h1>
+        <div class="text-center">
+            <iframe width="100%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/13252257&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </div>
+    </div>
+    <div class="text-center">
+        
+    <button onclick="typeWriter()" class="btn btn-secondary">Click Me</button>
+    </div>
+    <br><br>
+    <p class="text-center" id="demo"></p>
+    <!-- Optional JavaScript -->
+    <script>
+        var i = 0;
+        var txt = 'Aku bisa saja hidup tanpa matahari, dan aku tidak perlu melihat cahaya rembulan, tapi aku sangat tidak bisa hidup tanpa cahaya wajahmu, tetaplah di sisiku untuk selamanya. Aku telah membuka hatiku untuk menunjukkan apa yang ada di dalamnya . Itu semua ada untukmu. sudah ada yang disembunyikan. Beri aku waktu maka aku membuatmu jatuh cinta kepadaku, sebagaiman aku jatuh inta kepadamu. Cintailah aku seadanya, kalau kamu mencintaiku sedikit saja, aku akan menyerahkan seluruh hatiku untukmu';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
+
+
+</body>
+
+</html>
