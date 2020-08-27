@@ -42,9 +42,14 @@
         <div class="text-center mt-5">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <div class="embed-responsive embed-responsive-16by9">
+                    <div 
+                        class="embed-responsive embed-responsive-16by9" 
+                        data-original-title="Play Me"
+                        id="embed">
 
-                        <iframe width="560" height="315"
+                        <iframe 
+                                
+                            width="560" height="315"
                             src="https://www.youtube.com/embed/XRuDQ6aYeD0?controls=0&autoplay=1" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -114,13 +119,20 @@
     </script>
 
     <script>
+        
         $('#heart').tooltip({
             placement: 'top',
             trigger: 'manual'
         }).tooltip('show');
+        $('#embed').tooltip({
+            placement: 'top',
+            trigger: 'manual'
+        }).tooltip('show');
+
         $('#heart').on('click', function () {
             $(this).tooltip('hide');
         });
+        
         $('#cop').hide();
         var i = 0;
         var txt =
@@ -132,14 +144,24 @@
             setInterval(() => {
                 $('#cop').show();
                 $('#MyModel').modal('show');
+                $('#embed').tooltip('hide');
             }, 25000);
 
+            $("html, body").animate({ 
+                    scrollTop: $( 
+                      'html, body').get(0).scrollHeight 
+                }, 2000); 
+
+
             if (i < txt.length) {
+                
                 document.getElementById("demo").innerHTML += txt.charAt(i);
                 i++;
                 setTimeout(typeWriter, speed);
             }
         }
+
+        
     </script>
 </body>
 
