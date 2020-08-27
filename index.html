@@ -143,9 +143,13 @@
         function typeWriter() {
             setInterval(() => {
                 $('#cop').show();
-                $('#MyModel').modal('show');
+                
                 $('#embed').tooltip('hide');
-            }, 50000);
+            }, 51000);
+
+            setInterval(() => {
+                $('#MyModel').modal('show');
+            }, 60000);
 
             $("html, body").animate({ 
                     scrollTop: $( 
