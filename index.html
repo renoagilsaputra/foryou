@@ -22,8 +22,13 @@
             background-image: linear-gradient(to right, rgb(248, 79, 79), rgb(240, 177, 240));
         }
 
+
         #demo {
             font-size: 20px;
+        }
+
+        .pic {
+            border-radius: 100px;
         }
     </style>
     <title>For You!</title>
@@ -31,27 +36,31 @@
 
 <body>
 
-
     <div class="container">
+
         <h1 class="text-center text-white">For you My Special Girl</h1>
-        <div class="text-center">
+        <div class="text-center mt-5">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <img class="img-fluid rounded-circle" width="500px" height="300px"
-                        src="https://3.bp.blogspot.com/-D81iCJn6QBU/VvOTrs-ojAI/AAAAAAAAAMg/E4CB_Gu-DRclIVfhZi900Z14TGufFcq5g/s1600/Sifat-Wanita-Pendiam.jpg">
+                    <div class="embed-responsive embed-responsive-16by9">
 
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/XRuDQ6aYeD0?controls=0&autoplay=1" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
             <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/jP6eEKrghGI?controls=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
 
-
+            <!-- <img class="pic" width="500px" height="300px" src="https://3.bp.blogspot.com/-D81iCJn6QBU/VvOTrs-ojAI/AAAAAAAAAMg/E4CB_Gu-DRclIVfhZi900Z14TGufFcq5g/s1600/Sifat-Wanita-Pendiam.jpg"> -->
         </div>
     </div>
     <br>
     <div class="text-center">
         <!-- <p><a href="#" rel="tooltip" data-original-title="you have 2 notificationa">Notification</a>.</p> -->
-        <button onclick="typeWriter()" data-original-title="Click Me" id="heart" class="btn btn-danger"><i
+        <button onclick="typeWriter()" data-original-title="Click Me" id="heart" class="btn btn-danger mt-4"><i
                 class="fa fa-heart"></i></button>
     </div>
     <br>
@@ -59,18 +68,13 @@
 
         <div class="text-center text-white" id="demo"></div>
         <div class="text-center text-white" id="cop">- From R -</div>
+        <!-- <div class="text-center">
 
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Click Me
+            </button>
+        </div> -->
     </div>
-
-    <div class="embed-responsive embed-responsive-4by3">
-        <iframe
-            style="visibility: hidden;" 
-            width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/82725562&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </div>
-
-
-
     <!-- Modal -->
     <div class="modal fade" id="MyModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -94,6 +98,8 @@
             </div>
         </div>
     </div>
+
+
     <!-- Optional JavaScript -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
