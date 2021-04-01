@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
+
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap');
 
@@ -35,21 +37,27 @@
 </head>
 
 <body>
-
     <div class="container">
 
         <h1 class="text-center text-white">For you My Special Girl</h1>
+        <img src="img/img.png" width="400px" height="400px" class="img-fluid d-block mx-auto rounded-circle" alt="">
+
+        <div class="text-center">
+            <!-- <p><a href="#" rel="tooltip" data-original-title="you have 2 notificationa">Notification</a>.</p> -->
+            <button onclick="typeWriter()" data-original-title="Click Me" id="heart" class="btn btn-danger mt-4"><i
+                    class="fa fa-heart"></i></button>
+        </div>
+        <div class="container">
+        
+            <div class="text-center text-white" id="demo"></div>
+            <div class="text-center text-white" id="cop">- From R -</div>
+    
+        </div>
         <div class="text-center mt-5">
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <div 
-                        class="embed-responsive embed-responsive-16by9" 
-                        data-original-title="Play Me"
-                        id="embed">
-
-                        <iframe 
-                                
-                            width="560" height="315"
+                    <div class="embed-responsive embed-responsive-16by9" id="embed">
+                        <iframe style="visibility: hidden;" width="560" height="315"
                             src="https://www.youtube.com/embed/XRuDQ6aYeD0?controls=0&autoplay=1" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
@@ -63,37 +71,22 @@
         </div>
     </div>
     <br>
-    <div class="text-center">
-        <!-- <p><a href="#" rel="tooltip" data-original-title="you have 2 notificationa">Notification</a>.</p> -->
-        <button onclick="typeWriter()" data-original-title="Click Me" id="heart" class="btn btn-danger mt-4"><i
-                class="fa fa-heart"></i></button>
-    </div>
+
     <br>
-    <div class="container">
 
-        <div class="text-center text-white" id="demo"></div>
-        <div class="text-center text-white" id="cop">- From R -</div>
-        <!-- <div class="text-center">
-
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Click Me
-            </button>
-        </div> -->
-    </div>
     <!-- Modal -->
     <div class="modal fade" id="MyModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-danger">
-                    <h5 class="modal-title text-white text-center" id="exampleModalLabel">Apakah kamu mau jadi
-                        pendamping hidupku?</h5>
+                    <h5 class="modal-title text-white text-center" id="exampleModalLabel">Mau ngga jadi pacarku?</h5>
                     <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
-                        <a href="https://api.whatsapp.com/send?phone=6283863447918&text=Aku%20Mau%20Jadi%20Pendamping%20Hidupmu"
+                        <a href="https://api.whatsapp.com/send?phone=6283863447918&text=Aku%20Mau%20Jadi%20Pacarmu"
                             class="btn btn-outline-danger">Mau</a>
                         <a href="https://api.whatsapp.com/send?phone=6283863447918&text=Maaf%20Aku%20Menolaknya"
                             class="btn btn-outline-dark">Tidak</a>
@@ -119,7 +112,6 @@
     </script>
 
     <script>
-        
         $('#heart').tooltip({
             placement: 'top',
             trigger: 'manual'
@@ -132,7 +124,7 @@
         $('#heart').on('click', function () {
             $(this).tooltip('hide');
         });
-        
+
         $('#cop').hide();
         var i = 0;
         var txt =
@@ -143,7 +135,7 @@
         function typeWriter() {
             setInterval(() => {
                 $('#cop').show();
-                
+
                 $('#embed').tooltip('hide');
             }, 51000);
 
@@ -151,21 +143,19 @@
                 $('#MyModel').modal('show');
             }, 60000);
 
-            $("html, body").animate({ 
-                    scrollTop: $( 
-                      'html, body').get(0).scrollHeight 
-                }, 2000); 
+            $("html, body").animate({
+                scrollTop: $(
+                    'html, body').get(0).scrollHeight
+            }, 2000);
 
 
             if (i < txt.length) {
-                
+
                 document.getElementById("demo").innerHTML += txt.charAt(i);
                 i++;
                 setTimeout(typeWriter, speed);
             }
         }
-
-        
     </script>
 </body>
 
